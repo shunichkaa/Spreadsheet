@@ -1,6 +1,6 @@
-window.onload = () => {
+window.onload = function() {
   const container = document.getElementById("container");
   const createLabel = (name) => {
-
-  }
-}
+    const label = document.createElement("div");
+  };
+};
