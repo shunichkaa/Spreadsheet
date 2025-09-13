@@ -66,7 +66,10 @@ const evalFormula = (x, cells) => {
   );
 
   const functionExpanded = applyFunction(cellExpanded);
-  return functionExpanded;
+
+  return functionExpanded === x
+    ? functionExpanded
+    : evalFormula(functionExpanded, cells);
 };
 
 window.onload = () => {
