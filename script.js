@@ -33,11 +33,16 @@ const spreadsheetFunctions = {
   even: nums => nums.filter(isEven),
   someeven: nums => nums.some(isEven),
   everyeven: nums => nums.every(isEven),
-
   firsttwo: nums => nums.slice(0, 2),
   lasttwo: nums => nums.slice(-2),
   has2: nums => nums.includes(2),
   increment: nums => nums.map(num => num + 1),
+  random: nums => {
+    const [a, b] = nums.slice(0, 2);
+    const min = a;
+    const max = a + b; // не включая max
+    return Math.floor(Math.random() * (max - min) + min);
+  }
 };
 
 const applyFunction = str => {
