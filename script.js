@@ -38,7 +38,8 @@ const spreadsheetFunctions = {
   has2: nums => nums.includes(2),
   increment: nums => nums.map(num => num + 1),
   random: ([x, y]) => Math.floor(Math.random() * y + x),
-  range: ([start, end]) => range(start, end)
+  range: nums => range(...nums),
+  nodupes: nums => [...new Set(nums)]
 };
 
 const applyFunction = str => {
